@@ -16,7 +16,19 @@ def dadjokes():
     print(joke.punchline)
     return render_template("dadjokes.html", joke = joke)
 
-@app.route("/result")
-@app.route("/rockpaperscissors")
+
+@app.route("/rockpaperscissors" , methods=["POST", "GET"])
 def rockpaperscissors():
-    return render_template("rockpaperscissor.html")
+    if request.method == "POST":
+        result = request.form['sub']
+        print(result)
+        return redirect(url_for("result.html", result = result))
+    else:
+        return render_template("rockpaperscissor.html")
+
+   
+
+@app.route("/<res>")
+def result(res):
+   return f"<h1>{res}</h1>"
+    

@@ -15,22 +15,43 @@
 {% block body %}
 <h2 class="subtitle">Choose what you taking: </h2>
 <div class="ch-container">
-<form class="rock-form" action="/result" method="POST">
-    
     <div class="ch-box">
-        <input id="rock" class="choose" type="radio"  name="choice" value="rock" />
-    <label for="rock">rock</label>
-    </div>
-    <div class="ch-box">
-        <input id="paper" class="choose" type="radio" name="choice" value="paper"/>
-    <label for="paper">paper</label>
-    </div>
-    <div class="ch-box">
-        <input id="scissors" class="choose" type="radio" name="choice" value="scissors"/>
-    <label for="sciccors">scissors</label>
-    </div> 
-    
-</form>
-</div>
+        <form class="rock-form" action="#" method="post">
+            
+            
+                <input id="rock" class="choose" type="radio"  name="choice" value="rock" />
+                <label for="rock" style="background: url('/static/Images/rock.jpg');  object-fit: fill;">rock</label>
+        
+            <!-- <div class="ch-box"> -->
+                <input id="paper" class="choose" type="radio" name="choice" value="paper"/>
+                <label for="paper" style="background: url('/static/Images/paper.jpg');  object-fit: fill;">paper</label>
+            <!-- </div> -->
+            <!-- <div class="ch-box"> -->
+                <input id="scissors" class="choose" type="radio" name="choice" value="scissors"/>
+                <label for="scissors" style="background: url('/static/Images/scissors.jpg');  object-fit: fill;" >scissors</label>
+             </div>
+                <input type="submit" value="submit"/>
+             <!-- <div class="container">
+                <button id="btn">
+                    <p id="btnText">Submit</p>
+                    <div class="check-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                        </svg>
+                    </div>
+                </button>
+            </div>
+            <script type="text/javascript">
+                const btn = document.querySelector("#btn");
+                const btnText = document.querySelector("#btnText");
+        
+                btn.onclick = () => {
+                    btnText.innerHTML = "Thanks";
+                    btn.classList.add("active");
+                };
+            </script> -->
+        </form>
+   
+</div> 
 
 {% endblock %}
