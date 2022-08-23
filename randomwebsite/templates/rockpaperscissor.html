@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block titlePage %}
+<h1 class="title">Lets play rock, paper or scissors</h1>
+{% endblock %}
+
+{% block bodyclass %}
+<body style=" background: url('/static/Images/rock-background.jpg');">
+{% endblock %}
+
+{% block body %}
+<h2 class="subtitle">Choose what you taking: </h2>
+<div class="ch-container">
+<form class="rock-form" action="/result" method="POST">
+    
+    <div class="ch-box">
+        <input id="rock" class="choose" type="radio"  name="choice" value="rock" />
+    <label for="rock">rock</label>
+    </div>
+    <div class="ch-box">
+        <input id="paper" class="choose" type="radio" name="choice" value="paper"/>
+    <label for="paper">paper</label>
+    </div>
+    <div class="ch-box">
+        <input id="scissors" class="choose" type="radio" name="choice" value="scissors"/>
+    <label for="sciccors">scissors</label>
+    </div> 
+    
+</form>
+</div>
+
+{% endblock %}
