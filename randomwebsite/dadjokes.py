@@ -2,6 +2,7 @@ from flask import render_template, url_for, request, abort, redirect, flash
 import random
 import json
 import requests
+from randomwebsite.key import dadkey
 
 class Joke:
     def __init__(self, setup, punchline, author, nswf):
@@ -13,7 +14,7 @@ class Joke:
 url = "https://dad-jokes.p.rapidapi.com/random/joke"
 
 headers = {
-	"X-RapidAPI-Key": "5d27c56599msh50538298144a3dcp197319jsne9f3cbd6ab37",
+	"X-RapidAPI-Key": dadkey,
 	"X-RapidAPI-Host": "dad-jokes.p.rapidapi.com"
 }
 
