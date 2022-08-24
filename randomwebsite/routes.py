@@ -1,7 +1,13 @@
 from flask import render_template, url_for, request, abort, redirect, flash
+# from flask_wtf import FlaskForm
+# from wtforms import StringField, SubmitField
+# from wtforms.validators import DataRequired
 from randomwebsite import app
 import random
 from randomwebsite.dadjokes import getJoke
+from randomwebsite.key import sec_key
+
+app.config['SECRET_KEY'] = sec_key
 
 @app.route("/home")
 @app.route("/")
@@ -20,15 +26,15 @@ def dadjokes():
 @app.route("/rockpaperscissors" , methods=["POST", "GET"])
 def rockpaperscissors():
     if request.method == "POST":
-        result = request.form['sub']
+        result = request.form['choice']
         print(result)
-        return redirect(url_for("result.html", result = result))
+        return render_template("rockpaperscissor.html", result = result)
     else:
-        return render_template("rockpaperscissor.html")
+        return render_template("rockpaperscissor.html", result = "NONE")
 
    
 
 @app.route("/<res>")
 def result(res):
-   return f"<h1>{res}</h1>"
+   return render_template("rockpaperscissor.html", result = res)
     

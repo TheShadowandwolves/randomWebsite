@@ -51,7 +51,9 @@
                 };
             </script> -->
         </form>
-   
+        
 </div> 
-
+{% if result != "NONE" %}
+    <h4>Your result is: {{result}}</h4>
+{% endif %}
 {% endblock %}
