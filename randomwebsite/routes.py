@@ -9,6 +9,8 @@ from randomwebsite.key import sec_key
 
 app.config['SECRET_KEY'] = sec_key
 
+rps = ["rock", "paper", "scissors"]
+
 @app.route("/home")
 @app.route("/")
 def home():
@@ -26,9 +28,25 @@ def dadjokes():
 @app.route("/rockpaperscissors" , methods=["POST", "GET"])
 def rockpaperscissors():
     if request.method == "POST":
-        result = request.form['choice']
-        print(result)
-        return render_template("rockpaperscissor.html", result = result)
+        if request.form:
+            user_result = request.form['choice']
+            ai_result = random.choice(rps)
+            if ai_result == "rock" and user_result == "paper":
+                won = "You"
+            elif ai_result == "paper" and user_result == "scissors":
+                won = "You"
+            elif ai_result == "scissors" and user_result == "rock":
+                won = "You"
+            elif ai_result == user_result:
+                won = "Nobody"
+            else:
+                won = "AI"
+            print(user_result)
+            print(ai_result)
+            print(won)
+            return render_template("rockpaperscissor.html", result = user_result, airesult = ai_result, won = won)
+        else:
+            return render_template("rockpaperscissor.html", result = "Did not choose!!!", airesult = "Oviously will be winning!", won = "AI in his greatest mind ")
     else:
         return render_template("rockpaperscissor.html", result = "NONE")
 

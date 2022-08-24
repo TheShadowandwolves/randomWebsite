@@ -260,3 +260,18 @@ svg path{
     transition: 1s;
     transition-delay: 1s;
 }
+
+.sub{
+    display: block;
+    position: relative;
+    margin-top: 10em;
+}
+
+.result{
+    display: block;
+    position: relative;
+    margin-top: 10em;
+    background: rgba(0, 255, 234, 0.274);
+    border-radius: 20px;
+    padding: 10px;
+}

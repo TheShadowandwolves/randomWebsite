@@ -30,7 +30,8 @@
                 <input id="scissors" class="choose" type="radio" name="choice" value="scissors"/>
                 <label for="scissors" style="background: url('/static/Images/scissors.jpg');  object-fit: fill;" >scissors</label>
              </div>
-                <input type="submit" value="submit"/>
+             <div class="sub"><input type="submit" value="submit"/></div>
+                
              <!-- <div class="container">
                 <button id="btn">
                     <p id="btnText">Submit</p>
@@ -54,6 +55,15 @@
         
 </div> 
 {% if result != "NONE" %}
-    <h4>Your result is: {{result}}</h4>
+<div class="result">
+    <h4>Your choise is: {{result}}</h4>
+    <h4>AI choise is: {{airesult}}</h4>
+    <br>
+    <h4>{{won}} won the game!</h4>
+</div>
 {% endif %}
+
+<div class="home-button">
+    <a href="{{ url_for('home') }}" class="refresh-link">back HOME</a>
+</div>
 {% endblock %}
