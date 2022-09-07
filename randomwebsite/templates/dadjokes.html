@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block titlePage %}
-<h1 class="title">Some fun dad jokes</h1>
+<h1 class="main-title">Some fun dad jokes</h1>
 {% endblock %}
 
 {% block bodyclass %}
@@ -13,7 +13,9 @@
 {% endblock %}
 
 {% block body %}
-
+<div class="dad-home-button">
+    <a href="{{ url_for('home') }}" class="refresh-link">back HOME</a>
+</div>
 <div class="refresh">
     <a href="{{ url_for('dadjokes') }}" class="refresh-link">Refresh</a>
 </div>
@@ -25,8 +27,5 @@
     <div class="punchline-box">
         <h2 class="setup-text">{{joke.punchline}}</h2> 
     </div>
-</div>
-<div class="home-button">
-    <a href="{{ url_for('home') }}" class="refresh-link">back HOME</a>
 </div>
 {% endblock %}

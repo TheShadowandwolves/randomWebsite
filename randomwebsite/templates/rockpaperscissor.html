@@ -3,16 +3,19 @@
 {% block head %}
 
 {% endblock %}
-
+{% block bodyclass %}
+<body style=" background: url('/static/Images/rock-background.jpg');">
+{% endblock %}
 {% block titlePage %}
 <h1 class="title">Lets play rock, paper or scissors</h1>
 {% endblock %}
 
-{% block bodyclass %}
-<body style=" background: url('/static/Images/rock-background.jpg');">
-{% endblock %}
+
 
 {% block body %}
+<div class="home-button">
+    <a href="{{ url_for('home') }}" class="refresh-link">back HOME</a>
+</div>
 <h2 class="subtitle">Choose what you taking: </h2>
 <div class="ch-container">
     <div class="ch-box">
@@ -63,7 +66,5 @@
 </div>
 {% endif %}
 
-<div class="home-button">
-    <a href="{{ url_for('home') }}" class="refresh-link">back HOME</a>
-</div>
+
 {% endblock %}

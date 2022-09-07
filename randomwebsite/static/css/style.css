@@ -66,14 +66,33 @@ body, html{
 }
 
 .title{
+    position: relative;
+    top: auto;
+    margin: auto;
+}
+
+.main-title{
     position: absolute;
-    top: 2em;
-    margin: 0;
+    top: 20px;
+    margin: auto;
 }
 
 .home-button{
+    display: flex;
+    position: relative;
+    bottom: auto;
+    width: fit-content;
+    height: 20px;
+    background-color: aquamarine;
+    margin: 20px 0;
+    padding: 1em;
+    border-radius: 20px;
+}
+
+.dad-home-button{
     position: absolute;
-    bottom: 5em;
+    top: 2.5rem;
+    bottom: auto;
     width: fit-content;
     height: 20px;
     background-color: aquamarine;
@@ -133,7 +152,7 @@ body, html{
 }
 
 .ch-container{
-
+    display: block;
     flex-direction: column;
     white-space: nowrap;
     width: 320px;
@@ -196,7 +215,7 @@ body, html{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 12vh;
+    margin-top: 20px;
 }
 
 button{
@@ -262,15 +281,17 @@ svg path{
 }
 
 .sub{
-    display: block;
+    display: flex;
     position: relative;
-    margin-top: 10em;
+    margin: auto;
+    top: 7em;
+    left: 30px;
 }
 
 .result{
     display: block;
     position: relative;
-    margin-top: 10em;
+    margin: auto;
     background: rgba(0, 255, 234, 0.274);
     border-radius: 20px;
     padding: 10px;
