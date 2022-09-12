@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/phone.css') }}"/>
+{% endblock %}
+
+{% block titlePage %}
+<h1 class="main-title">Fake smartphone</h1>
+{% endblock %}
+
+{% block bodyclass %}
+<body style=" background: url(''); object-fit: fill;">
+{% endblock %}
+
+{% block body %}
+
+<div class="phone-outside">
+    <div class="phone-speaker"></div>
+    <div class="phone-outside-screen">
+        <div class="background-screen">
+        <div class="notification-corner">
+            
+            <div class="self-camera"></div>
+            <div class="self-camera2"></div>
+            <div><p class="notification-time">16:36</p></div>
+            <div class="not-items not-item1"></div>
+            <div class="not-items not-item2"></div>
+            <div class="not-items not-item3"></div>
+        </div>
+        <div class="notification-corner2">
+            <div class="not-right-item not-item4"></div>
+            <div class="not-right-item not-item5"></div>
+            <div class="not-right-item not-item6"></div>
+            <div class="not-right-item not-item7"></div>
+        </div>
+        <div class="main-menu">
+            <div class="weather-app">
+                <h6 class="weather-title">Jerusalem</h6>
+                <h7 class="weather-temp">45°</h7>
+            </div>
+            <div class="apps">
+                <div class="app"></div>
+                <div class="app"></div>
+                <div class="app"></div>
+                <div class="app"></div>
+                <div class="app"></div>
+                <div class="app"></div>
+                <div class="app"></div>
+                <div class="app"></div>
+                <div class="app"></div>
+            </div>
+        </div>
+
+
+        <div class="bottom-menu">
+            <div class="app"></div>
+            <div class="app"></div>
+            <div class="app"></div>
+            <div class="app"></div>
+        </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

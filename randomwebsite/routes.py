@@ -50,7 +50,9 @@ def rockpaperscissors():
     else:
         return render_template("rockpaperscissor.html", result = "NONE")
 
-   
+@app.route("/smartphone")
+def smartphone():
+    return render_template("smartphone.html")
 
 @app.route("/<res>")
 def result(res):
