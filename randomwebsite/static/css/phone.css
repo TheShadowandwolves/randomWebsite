@@ -33,6 +33,7 @@ body{
     object-fit: fill;
 }
 
+
 .phone-speaker{
     position: relative;
     margin: 1px 0;
@@ -209,10 +210,6 @@ body{
     
 }
 
-.yt{
-    background: url("/static/Images/youtube.png");
-    object-fit: contain;
-}
 
 img {
     max-width: 100%;
