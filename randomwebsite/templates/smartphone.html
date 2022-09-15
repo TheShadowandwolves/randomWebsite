@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/phone.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/phone.css') }}"/>
 {% endblock %}
 
 {% block titlePage %}
@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block bodyclass %}
-<body style=" background: url(''); object-fit: fill;">
+<body class="body-phone" style=" background: url(''); object-fit: fill;">
 {% endblock %}
 
 {% block body %}
@@ -39,28 +39,35 @@
                 <h7 class="weather-temp">45°</h7>
             </div>
             <div class="apps">
-               <a  href="#"> <div class="app">
+               <a  href="https://www.youtube.com/channel/UCV9AeIYOw3CiRO9irw5lJ-g"> <div class="app">
                 <img src="static/Images/youtube.png"/>
                </div></a>
-                <div class="app"></div>
-                <div class="app"></div>
-                <div class="app"></div>
-                <div class="app"></div>
-                <div class="app"></div>
-                <div class="app"></div>
-                <div class="app"></div>
-                <div class="app"></div>
+               <a  href="https://www.facebook.com/leo.blam.31/"> <div class="app">
+                <img src="static/Images/facebook.png"/>
+               </div></a>
+               <a  href="https://twitter.com/theshadow_leo"> <div class="app">
+                <img src="static/Images/twitter.png"/>
+                </div></a>
+                <a  href="https://www.facebook.com/leo.blam.31/"> <div class="app">
+                    <img src="static/Images/discord.png"/>
+                </div></a>
             </div>
         </div>
 
 
         <div class="bottom-menu">
-            <a class="instagram" href="#"> <div class="app">
+            <a href="https://www.instagram.com/theshadowandwolves/?hl=de"> <div class="app">
                 <img src="static/Images/instagram.png"/>
                </div></a>
-            <div class="app"></div>
-            <div class="app"></div>
-            <div class="app"></div>
+                <a href="https://www.linkedin.com/in/leonard-blam/"> <div class="app">
+                <img src="static/Images/linkedin.png"/>
+               </div></a>
+                <a  href="https://github.com/TheShadowandwolves"> <div class="app">
+                <img src="static/Images/github.png"/>
+                </div></a>
+                <a  href="#"> <div class="app">
+                <img src="static/Images/gmail.png"/>
+                </div></a>
         </div>
         </div>
     </div>

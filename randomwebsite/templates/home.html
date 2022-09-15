@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}"/>
 {% endblock %}
 
 {% block titlePage %}
@@ -20,7 +20,7 @@
     <!-- </div> -->
     </div>
 
-    <div class="home-page" style="background-color: rgb(21, 255, 0); width: 400px;">
+    <div class="home-page" style=" width: 400px;">
         <h4 class="page-text" >Rock, paper or scissor's game: </h4><a class="page-link" href="{{url_for('rockpaperscissors')}}">Play here</a>
     <!-- </div> -->
     </div>
